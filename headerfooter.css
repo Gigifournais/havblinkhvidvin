@@ -1,0 +1,213 @@
+/* Generelle stylinger */
+/* Header og navigation */
+header {
+    background-color: #87825B; /* Olivengrøn baggrund */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 100px; /* Øg højden */
+  }
+  
+  .wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+  }
+
+ 
+  /* Navigation */
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-links li a {
+    text-decoration: none;
+    color: #FFECCE;
+    font-weight: 400;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links li a:hover {
+    color: #B29D7B; /* Lys guld til hover */
+  }
+
+  /* Standard: Vis det store logo */
+.logo-desktop {
+  display: block;
+  width: 200px; /* Juster størrelsen på det store logo */
+  height: auto;/* Bevar billedets proportioner */
+}
+
+.logo-mobile {
+  display: none; /* Skjul det lille logo som standard */
+}
+
+/* Responsiv: Skift til det lille logo */
+@media (max-width: 768px) {
+  .logo-desktop {
+      display: none; /* Skjul det store logo på mobil */
+  }
+
+  .logo-mobile {
+      display: block; /* Vis det lille logo på mobil */
+      width: 100px; /* Juster størrelsen på det lille logo */
+      height: auto;
+  }
+}
+  /* Dropdown-menu styling */
+.nav-links .dropdown {
+  position: relative;
+}
+
+.nav-links .dropdown-icon {
+  margin-left: 5px;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.nav-links .dropdown-menu {
+  display: none; /* Skjul dropdown-menuen som standard */
+  position: absolute;
+  top: 100%; /* Placer menuen lige under linket */
+  left: 0;
+  background-color: #87825Bff; /* Hvid baggrund */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blød skygge */
+  list-style: none;
+  padding: 10px 0;
+  margin: 0;
+  z-index: 1000;
+  border-radius: 8px; /* Afrundede hjørner */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Glidende overgang */
+  opacity: 0; /* Skjul med gennemsigtighed */
+  transform: translateY(-10px); /* Flyt lidt opad */
+}
+
+.nav-links .dropdown-menu li {
+  padding: 10px 20px; /* Mere plads til hvert element */
+}
+
+.nav-links .dropdown-menu li a {
+  text-decoration: none;
+  color: #2b2b2b; /* Mørk tekstfarve */
+  font-size: 0.9rem;
+  transition: color 0.3s ease; /* Glidende farveændring */
+}
+
+.nav-links .dropdown-menu li a:hover {
+  color: #FFECCE; /* farve ved hover */
+}
+
+.nav-links .dropdown:hover .dropdown-menu {
+  display: block; /* Vis dropdown-menuen ved hover */
+  opacity: 1; /* Gør menuen synlig */
+  transform: translateY(0); /* Fjern opad-flytning */
+}
+
+  /* Ikoner i header */
+  .icons_header a img {
+    width: 22px;
+    margin-left: 1rem;
+    filter: brightness(0) invert(1); /* Gør mørke ikoner hvide */ 
+  }
+
+
+/* Burgermenu (mobil) */
+.menu-icon {
+  display: none;
+  font-size: 2rem;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+/* Responsiv menu */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background-color: #87825B;
+    width: 100%;
+    padding: 1rem 0;
+    border-top: 1px solid #ddd;
+  }
+
+  .menu-checkbox:checked ~ .nav-links {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .icons_header {
+    display: none;
+  }
+}
+
+/* FOOTER STYLING */
+.footer {
+    background-color: #87825B;
+    color: #000;
+    padding: 40px 20px; /* Øg pladsen */
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-kolonner {
+    display: flex;
+    gap: 50px; /* Reducer afstanden mellem kolonner */
+    justify-content: space-between; /* Fordel kolonnerne jævnt */
+    flex-wrap: wrap; /* Tillad kolonnerne at bryde til næste linje */
+}
+
+.footer-kolonne {
+    flex: 1; /* Gør kolonnerne fleksible */
+    min-width: 200px; /* Sæt en minimumsbredde */
+    text-align: left; /* Juster teksten til venstre */
+}
+
+.footer-kolonne h3 {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.footer-kolonne ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-kolonne li {
+    margin-bottom: 5px;
+}
+
+.footer-kolonne a {
+    text-decoration: none;
+    color: black;
+    word-wrap: break-word; /* Tillad linjeskift i lange links */
+}
+
+@media (max-width: 768px) {
+    .footer-kolonner {
+        flex-direction: column; /* Stak kolonnerne vertikalt */
+        align-items: center; /* Centrer kolonnerne */
+        gap: 20px;
+    }
+    .footer-kolonne {
+        text-align: center; /* Centrer teksten i hver kolonne */
+    }
+}

@@ -1,0 +1,216 @@
+/* Basis */
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', sans-serif;
+    background-color: #FAF8F3;
+    color: #2b2b2b;
+    
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .nav-links a.active {
+    position: relative;
+    color: #000; /* Fremhæv farven på det aktive link */
+    font-weight: bold; /* Gør teksten fed for at fremhæve */
+}
+
+.nav-links a.active::after {
+    content: ""; /* Tilføjer en streg under teksten */
+    position: absolute;
+    bottom: -5px; /* Placerer stregen lige under teksten */
+    left: 0;
+    width: 100%; /* Stregen fylder hele bredden af teksten */
+    height: 0.5px; /* Tykkelsen af stregen */
+    background-color: #000; /* Farven på stregen */
+}
+/* Logo */
+/* Standard: Vis kun det store logo */
+.logo-desktop {
+    display: block; /* Vis det store logo */
+  }
+  
+  .logo-mobile {
+    display: none; /* Skjul det lille logo */
+  }
+  
+  /* På mindre skærme: Vis kun det lille logo */
+  @media (max-width: 768px) {
+    .logo-desktop {
+      display: none; /* Skjul det store logo */
+    }
+  
+    .logo-mobile {
+      display: block; /* Vis det lille logo */
+    }
+  }
+  /* Hero sektion */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 60px; /* Tilføj afstand under hero-sektionen */
+
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFECCE;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFECCE;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Forbedrer kontrasten */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .hero-text h1 {
+    font-size: 2rem; /* Standard fontstørrelse */
+    text-align: center;
+    margin: 0;
+}
+
+.hero-text h1.mobile-text {
+    display: none; /* Skjul mobilteksten som standard */
+}
+
+.hero-text h1.desktop-text {
+    display: block; /* Vis desktopteksten som standard */
+}
+.kontakt-overskrift {
+    text-align: center; /* Centrerer overskriften horisontalt */
+    margin: 40px 0; /* Tilføjer afstand over og under overskriften */
+}
+
+.kontakt-overskrift h2 {
+    font-family: 'Cormorant Garamond', serif; /* Matcher skrifttypen */
+    font-size: 3rem; /* Gør overskriften større */
+    font-weight: bold; /* Gør teksten fed */
+    color: #2b2b2b; /* Matcher tekstfarven */
+}
+@media (max-width: 768px) {
+    .hero-text h1.mobile-text {
+        display: block; /* Vis mobilteksten på mindre skærme */
+        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
+    }
+
+    .hero-text h1.desktop-text {
+        display: none; /* Skjul desktopteksten på mindre skærme */
+    }
+    .hero {
+        height: 300px; /* Reducer højden på mindre skærme */
+    }
+
+    .hero-text h1.mobile-text {
+        display: block; /* Vis mobilteksten på mindre skærme */
+        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
+    }
+
+    .hero-text h1.desktop-text {
+        display: none; /* Skjul desktopteksten på mindre skærme */
+    }
+    .hero {
+        margin-bottom: 20px; /* Mindre afstand på små skærme */
+    }
+        .kontakt-container {
+          flex-direction: column;
+          padding: 0 20px; /* Reducer padding på små skærme */
+        }
+      
+        .kontakt-form,
+        .kontakt-map {
+          flex: none;
+          width: 100%;
+        }
+        .kontakt-overskrift h2 {
+            font-size: 2rem; /* Reducer størrelsen på mindre skærme */
+        }
+      }
+/* Kontakt sektion */
+.kontakt-container {
+    display: flex;
+    gap: 60px; /* Øg afstanden mellem formularen og kortet */
+    margin-top: 60px; /* Øg afstanden over kontaktsektionen */
+    margin-bottom: 60px; /* Tilføj afstand under kontaktsektionen */
+    padding: 0 40px; /* Tilføj padding til højre og venstre for indholdet */
+    max-width: 1200px; /* Begræns bredden af indholdet */
+    margin-left: auto; /* Centrer indholdet */
+    margin-right: auto; /* Centrer indholdet */
+
+  }
+  
+  .kontakt-form {
+    flex: 1;
+  }
+  
+  .kontakt-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;/* Øg afstanden mellem felterne i formularen */
+  }
+  
+  .kontakt-form label {
+    font-size: 1rem;
+    font-weight: bold;
+  }
+  
+  .kontakt-form input,
+  .kontakt-form select,
+  .kontakt-form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #C2A476;
+    border-radius: 5px;
+  }
+  
+  .kontakt-form textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  .send-knap {
+    background-color: #C2A476;
+    color: rgb(12, 10, 10);
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 0px;
+  }
+  
+  .send-knap:hover {
+    background-color: #A88A63;
+  }
+  
+  /* Google Maps */
+  .kontakt-map {
+    flex: 1;
+  }
+  
+  .kontakt-map iframe {
+    width: 100%; /* Fylder hele bredden af containeren */
+    height: 400px; /* Juster højden efter behov */
+    border: none; /* Fjern kantlinjer */
+}

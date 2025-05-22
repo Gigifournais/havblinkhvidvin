@@ -1,0 +1,245 @@
+/* Basis */
+body {
+  
+    margin: 0;
+    font-family: 'Cormorant Garamond', sans-serif;
+    background-color: #FAF8F3;
+    color: #2b2b2b;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif; /* Anvend skrifttypen */
+}
+/* Logo */
+/* Standard: Vis kun det store logo */
+.logo-desktop {
+  display: block; /* Vis det store logo */
+}
+
+.logo-mobile {
+  display: none; /* Skjul det lille logo */
+}
+
+/* På mindre skærme: Vis kun det lille logo */
+@media (max-width: 768px) {
+  .logo-desktop {
+    display: none; /* Skjul det store logo */
+  }
+
+  .logo-mobile {
+    display: block; /* Vis det lille logo */
+  }
+}
+  /* Hero sektion */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px; /* Juster højden efter behov */
+    overflow: hidden;
+}
+
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for, at billedet fylder hele containeren uden at forvrænge */
+}
+
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFECCE; /* Sørger for, at teksten er synlig på billedet */
+    text-align: center;
+    font-size: 2rem; /* Juster tekststørrelsen */
+    font-weight: bold; /* Gør teksten mere fremtrædende */
+}
+
+.hero-text h1 {
+    font-size: 3rem; /* Juster størrelsen på overskriften */
+    margin: 0;
+}
+
+.hero-text p {
+    font-size: 1.5rem; /* Juster størrelsen på underteksten */
+    margin: 10px 0 0;
+}
+.hero-button {
+    display: inline-block;
+    margin-top: 20px; /* Giver afstand til teksten ovenover */
+    padding: 10px 20px; /* Juster knapstørrelsen */
+    background-color: #B29D7B; /* Knapfarve */
+    color: rgb(19, 18, 18); /* Tekstfarve */
+    text-decoration: none; /* Fjern understregning */
+    font-size: 1rem; /* Juster tekststørrelsen */
+    font-weight: bold; /* Gør teksten mere fremtrædende */
+    border-radius: 0px; /* Fjern afrundede hjørner for skarpe kanter */
+    transition: background-color 0.3s ease; /* Tilføj hover-effekt */
+}
+
+.hero-button:hover {
+    background-color: #9C8A6A; /* Mørkere farve ved hover */
+}
+
+/* hurtig adgang -4 ikoner */
+.awards-section {
+  display: flex;
+  justify-content: space-around; /* Fordeler elementerne jævnt */
+  align-items: center;
+  margin: 40px 0; /* Afstand over og under sektionen */
+  text-align: center;
+}
+
+.award-item {
+  display: flex;
+  flex-direction: column; /* Placerer elementerne vertikalt */
+  align-items: center;
+  max-width: 150px; /* Begrænser bredden af hvert element */
+}
+
+.award-item img {
+  width: 150px; /* Juster billedstørrelsen */
+  height: auto;
+  margin-bottom: 10px; /* Afstand mellem billedet og teksten */
+}
+
+.award-item h3 {
+  font-size: 1.2rem; /* Størrelse på overskriften */
+  color: #2b2b2b; /* Mørk tekstfarve */
+  margin: 10px 0 5px; /* Afstand over og under overskriften */
+}
+
+.award-item p {
+  font-size: 0.9rem; /* Størrelse på den lille tekst */
+  color: #6c6c6c; /* Lysere tekstfarve */
+  margin: 0 0 10px; /* Afstand under teksten */
+}
+
+.award-item .arrow {
+  font-size: 1.5rem; /* Størrelse på pilen */
+  color: #87825B; /* Olivengrøn farve */
+  cursor: pointer; /* Gør pilen klikbar */
+  transition: transform 0.3s ease; /* Tilføj en hover-effekt */
+}
+
+.award-item .arrow:hover {
+  transform: translateX(5px); /* Flyt pilen lidt til højre ved hover */
+}
+/* Omkring os sektion */
+.about-section {
+  text-align: center;
+  margin: 60px 0; /* White space over og under sektionen */
+}
+
+.about-small-text {
+  font-size: 1.2rem; /* Mindre tekststørrelse */
+  color: #6c6c6c; /* Lysere tekstfarve */
+  margin-bottom: 10px; /* Afstand til den store tekst */
+}
+
+.about-large-text {
+  font-size: 3rem; /* Stor tekststørrelse */
+  color: #2b2b2b; /* Mørk tekstfarve */
+  font-weight: bold; /* Gør teksten fremtrædende */
+  margin: 0; /* Fjern ekstra margin */
+}
+
+/* Billeder med tekst */
+.about-images-section {
+  display: flex;
+  justify-content: space-around; /* Fordeler billederne jævnt */
+  align-items: center;
+  margin: 60px 0; /* White space over og under sektionen */
+  text-align: center;
+  margin-bottom: 100px; /* Tilføj ekstra afstand under sektionen */
+  flex-wrap: wrap; /* Tillader billederne at bryde til næste linje */
+}
+.about-images-section + .about-images-section {
+  margin-top: 150px; /* Tilføj ekstra afstand over den næste sektion */
+}
+
+.about-image-item {
+  display: flex;
+  flex-direction: column; /* Placerer teksten under billedet */
+  align-items: center;
+  max-width: 300px; /* Begrænser bredden af hvert element */
+  margin: 20px; /* Afstand mellem billederne */
+  position: relative; /* Gør det muligt at placere pseudo-elementet i forhold til hele elementet */
+}
+
+.about-image-item img {
+  width: 300px; /* Juster billedstørrelsen */
+  height: auto;
+  margin-bottom: 15px; /* Afstand mellem billedet og teksten */
+}
+
+.about-image-item p {
+  font-size: 1.2rem; /* Tekststørrelse */
+  color: #2b2b2b; /* Tekstfarve */
+  margin: 0; /* Fjern ekstra margin */
+  padding-bottom: 10px; /* Afstand mellem teksten og stregen */
+  text-align: center; /* Centrer teksten */
+  position: relative; /* Sørger for, at teksten forbliver relativt placeret */
+}
+
+.about-image-item p::after {
+  content: ""; /* Tilføj en tom linje som streg */
+  display: block;
+  position: absolute; /* Gør det muligt at placere stregen i forhold til billedet */
+  width: 200%; /* Stregen skal matche billedets bredde */
+  height: 0.5px; /* Tykkelse af stregen */
+  background-color: #6c6c6c; /* Farve på stregen */
+  bottom: -10px; /* Placer stregen lige under teksten */
+  left: 0; /* Sørger for, at stregen starter fra venstre */
+}
+/* Responsivt layout til mindre skærme */
+@media (max-width: 768px) {
+  .about-images-section {
+      flex-direction: column; /* Ændrer layoutet til en kolonne */
+      align-items: center; /* Centrerer elementerne */
+  }
+
+  .about-image-item {
+      max-width: 90%; /* Gør elementerne bredere på små skærme */
+  }
+
+  .about-image-item img {
+      max-width: 100%; /* Sørger for, at billedet fylder hele bredden af containeren */
+  }
+
+    .award-item img {
+      width: 120px; /* Mindre billeder på små skærme */
+  }
+  .hero-text {
+        font-size: 1.5rem; /* Mindre tekststørrelse */
+        padding: 0 20px; /* Tilføj lidt indrykning for bedre læsbarhed */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Reducer størrelsen på overskriften */
+    }
+
+    .hero-text p {
+        font-size: 1rem; /* Reducer størrelsen på underteksten */
+    }
+
+    .hero-button {
+        padding: 8px 16px; /* Gør knappen mindre */
+        font-size: 0.9rem; /* Reducer tekststørrelsen i knappen */
+    }
+  .awards-section {
+    flex-wrap: wrap; /* Tillad elementerne at bryde til næste linje */
+    justify-content: center; /* Centrer elementerne */
+    gap: 20px; /* Giv lidt afstand mellem elementerne */
+}
+
+.award-item {
+    flex: 1 1 calc(50% - 20px); /* Gør hvert element 50% bredt minus gap */
+    max-width: calc(50% - 20px); /* Begræns bredden til 50% minus gap */
+}
+
+.award-item img {
+    width: 120px; /* Mindre billeder på små skærme */
+}
+
+  }
+  

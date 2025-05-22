@@ -1,0 +1,198 @@
+/* Basis */
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', sans-serif;
+    background-color: #FAF8F3;
+    color: #2b2b2b;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .nav-links a.active {
+    position: relative;
+    color: #000; /* Fremhæv farven på det aktive link */
+    font-weight: bold; /* Gør teksten fed for at fremhæve */
+}
+
+.nav-links a.active::after {
+    content: ""; /* Tilføjer en streg under teksten */
+    position: absolute;
+    bottom: -5px; /* Placerer stregen lige under teksten */
+    left: 0;
+    width: 100%; /* Stregen fylder hele bredden af teksten */
+    height: 0.5px; /* Tykkelsen af stregen */
+    background-color: #000; /* Farven på stregen */
+}
+/* Logo */
+/* Standard: Vis kun det store logo */
+.logo-desktop {
+    display: block; /* Vis det store logo */
+  }
+  
+  .logo-mobile {
+    display: none; /* Skjul det lille logo */
+  }
+  
+  /* På mindre skærme: Vis kun det lille logo */
+  @media (max-width: 768px) {
+    .logo-desktop {
+      display: none; /* Skjul det store logo */
+    }
+  
+    .logo-mobile {
+      display: block; /* Vis det lille logo */
+    }
+  }
+  /* Hero sektion */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFECCE;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFECCE;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .hero-text h1 {
+    font-size: 2rem; /* Standard fontstørrelse */
+    text-align: center;
+    margin: 0;
+}
+
+.hero-text h1.mobile-text {
+    display: none; /* Skjul mobilteksten som standard */
+}
+
+.hero-text h1.desktop-text {
+    display: block; /* Vis desktopteksten som standard */
+}
+
+@media (max-width: 768px) {
+    .hero-text h1.mobile-text {
+        display: block; /* Vis mobilteksten på mindre skærme */
+        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
+    }
+
+    .hero-text h1.desktop-text {
+        display: none; /* Skjul desktopteksten på mindre skærme */
+    }
+}
+
+.vores-historie {
+    display: flex;
+    flex-wrap: wrap; /* Gør layoutet responsivt */
+    gap: 20px; /* Afstand mellem tekst og billede */
+    padding: 40px;
+    background-color: #FAF8F3; /* Baggrundsfarve */
+}
+
+.tekst-container {
+    flex: 1; /* Fylder pladsen tilgængelig */
+    max-width: 600px; /* Maksimal bredde for teksten */
+}
+
+.tekst-container h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.tekst-container p {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tekst-container h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-top: 20px;
+}
+
+.se-mere-knap {
+    background-color: #C2A476; /* Knapfarve */
+    color: #0e0d0d;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.se-mere-knap:hover {
+    background-color: #A88A63; /* Mørkere farve ved hover */
+}
+
+.billede-container {
+    flex: 1; /* Fylder pladsen tilgængelig */
+    max-width: 500px; /* Maksimal bredde for billedet */
+    text-align: center;
+    margin-left: 100px; /* Rykker billedet længere til højre */
+}
+
+.billede-container img {
+    width: 100%; /* Billedet fylder containerens bredde */
+    height: auto; /* Bevarer proportionerne */
+    border-radius: 0px; /* ingen afrunding af hjørner */
+}
+
+.billedtekst {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 0.9rem;
+    color: #555;
+    margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+    .vores-historie {
+        flex-direction: column; /* Stabler tekst og billede lodret */
+        align-items: center;
+    }
+
+    .tekst-container {
+        order: 2; /* Flyt teksten til anden position */
+        max-width: 100%; /* Fylder hele bredden */
+    }
+
+    .billede-container {
+        order: 1; /* Flyt billedet til første position */
+        max-width: 100%; /* Fylder hele bredden */
+    }
+
+    .tekst-container h2 {
+        text-align: center;
+    }
+
+    .billede-container img {
+        max-width: 90%; /* Reducer billedets bredde på mobil */
+    }
+}

@@ -1,0 +1,228 @@
+/* Basis */
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', sans-serif;
+    background-color: #FAF8F3;
+    color: #2b2b2b;
+    
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  
+  .nav-links a.active {
+    position: relative;
+    color: #000; /* Fremhæv farven på det aktive link */
+    font-weight: bold; /* Gør teksten fed for at fremhæve */
+}
+
+.nav-links a.active::after {
+    content: ""; /* Tilføjer en streg under teksten */
+    position: absolute;
+    bottom: -5px; /* Placerer stregen lige under teksten */
+    left: 0;
+    width: 100%; /* Stregen fylder hele bredden af teksten */
+    height: 0.5px; /* Tykkelsen af stregen */
+    background-color: #000; /* Farven på stregen */
+}
+/* Logo */
+/* Standard: Vis kun det store logo */
+.logo-desktop {
+    display: block; /* Vis det store logo */
+  }
+  
+  .logo-mobile {
+    display: none; /* Skjul det lille logo */
+  }
+  
+  /* På mindre skærme: Vis kun det lille logo */
+  @media (max-width: 768px) {
+    .logo-desktop {
+      display: none; /* Skjul det store logo */
+    }
+  
+    .logo-mobile {
+      display: block; /* Vis det lille logo */
+    }
+  }
+  /* Hero sektion */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 30px; /* Tilføj afstand under hero-sektionen */
+
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFECCE;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+  
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFECCE;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Forbedrer kontrasten */
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  .hero-text h1 {
+    font-size: 2rem; /* Standard fontstørrelse */
+    text-align: center;
+    margin: 0;
+}
+
+.hero-text h1.mobile-text {
+    display: none; /* Skjul mobilteksten som standard */
+}
+
+.hero-text h1.desktop-text {
+    display: block; /* Vis desktopteksten som standard */
+}
+/* vinkategrorier-section */
+.vinkategrorier-section {
+    text-align: center;
+    padding: 60px;
+  }
+  
+  .vinkategrorier-section h2 {
+    font-family: "playfair-display";
+    font-weight: 500;
+    font-size: 32px;
+    margin-top: 50px; /* Reducer afstanden over overskriften */
+    margin-bottom: 20px;
+    color: #000000;
+  }
+  
+  .vinkategrorier-menu {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-weight: 300;
+    font-size: 16px;
+  }
+  
+  .vinkategrorier-menu a {
+    text-decoration: none;
+    color: #000000;
+    border-bottom: 1px solid transparent;
+  }
+  
+  .vinkategrorier-menu a.active,
+  .vinkategrorier-menu a:hover {
+    border-color: #000000;
+  }
+  
+  .intro {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .temperaturer {
+    display: flex;
+    flex-direction: column; /* Stabler elementerne vertikalt */
+    align-items: center; /* Centrerer elementerne horisontalt */
+    gap: 30px; /* Tilføjer afstand mellem hver temperatur-item */
+    padding: 0 20px; /* Tilføjer lidt indvendig afstand fra siderne */
+  }
+  
+  .temperatur-item {
+    display: flex;
+    align-items: center; /* Justerer flasken og teksten vertikalt */
+    justify-content: space-between; /* Giver lidt afstand mellem flasken og teksten */
+    gap: 40px; /* Tilføjer afstand mellem flasken og teksten */
+    max-width: 600px; /* Begrænser bredden af hver temperatur-item */
+    width: 100%; /* Sørger for, at det er responsivt */
+    text-align: left; /* Justerer teksten til venstre */
+  }
+  
+  .temperatur-item img {
+    width: 60px; /* Juster størrelsen på flasken */
+    height: auto;
+  }
+  
+  .temperatur-item p {
+    margin: 0;
+  }
+  
+  .temperatur {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: right; /* Justerer temperaturen til højre */
+  }
+  
+  hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+  }
+  
+  .tips {
+    padding: 20px;
+    background-color: #FAF8F3;
+    text-align: center;
+  }
+  
+  .tips h2 {
+    font-weight: bold;
+  }
+
+@media (max-width: 768px) {
+    .hero-text h1.mobile-text {
+        display: block; /* Vis mobilteksten på mindre skærme */
+        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
+    }
+
+    .hero-text h1.desktop-text {
+        display: none; /* Skjul desktopteksten på mindre skærme */
+    }
+    .hero {
+        height: 300px; /* Reducer højden på mindre skærme */
+    }
+
+    .hero-text h1.mobile-text {
+        display: block; /* Vis mobilteksten på mindre skærme */
+        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
+    }
+
+    .hero-text h1.desktop-text {
+        display: none; /* Skjul desktopteksten på mindre skærme */
+    }
+    .hero {
+        margin-bottom: 20px; /* Mindre afstand på små skærme */
+    }
+        .kontakt-container {
+          flex-direction: column;
+          padding: 0 20px; /* Reducer padding på små skærme */
+        }
+        .vinkategrorier-menu {
+            flex-direction: column; /* Stabler links vertikalt */
+            gap: 10px; /* Reducerer afstanden mellem links */
+          }
+        
+          .vinkategrorier-menu a {
+            width: 100%; /* Gør links fuldbredde */
+            text-align: center; /* Centrerer teksten */
+          }
+        }

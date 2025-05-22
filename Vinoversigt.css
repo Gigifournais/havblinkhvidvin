@@ -1,0 +1,217 @@
+/* Basis */
+body {
+    margin: 0;
+    font-family: 'Cormorant Garamond', sans-serif;
+    background-color: #FAF8F3;
+    color: #2b2b2b;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+  .nav-links a.active {
+    position: relative;
+    color: #000; /* Fremhæv farven på det aktive link */
+    font-weight: bold; /* Gør teksten fed for at fremhæve */
+}
+
+.nav-links a.active::after {
+    content: ""; /* Tilføjer en streg under teksten */
+    position: absolute;
+    bottom: -5px; /* Placerer stregen lige under teksten */
+    left: 0;
+    width: 100%; /* Stregen fylder hele bredden af teksten */
+    height: 0.5px; /* Tykkelsen af stregen */
+    background-color: #000; /* Farven på stregen */
+}
+/* Logo */
+/* Standard: Vis kun det store logo */
+.logo-desktop {
+    display: block; /* Vis det store logo */
+  }
+  
+  .logo-mobile {
+    display: none; /* Skjul det lille logo */
+  }
+  
+  /* På mindre skærme: Vis kun det lille logo */
+  @media (max-width: 768px) {
+    .logo-desktop {
+      display: none; /* Skjul det store logo */
+    }
+  
+    .logo-mobile {
+      display: block; /* Vis det lille logo */
+    }
+  }
+  /* Hero sektion */
+  .hero {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+  }
+  
+  .hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #FFECCE;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  /* Filter */
+  .filter nav {
+    display: flex;
+    gap: 30px;
+    font-weight: 300;
+    font-size: 16px;
+    margin-left: 165px;
+  }
+  
+  .filter a {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-bottom: 50px;
+    color: #000000;
+    text-decoration: none;
+  }
+  
+  .filter img {
+    width: 30px;
+    margin-top: -5px;
+    margin-right: -25px;
+  }
+  
+  .divider-line {
+    width: 77%;
+    margin: 20px auto;
+    height: 1px;
+    background-color: black;
+  }
+  
+  /* Produkter */
+  .produkt-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    max-width: 1000px;
+    margin: 50px auto;
+  }
+  
+  .produkt {
+    text-align: center;
+    position: relative;
+  }
+  
+  .produkt-billede-container {
+    width: 100%; /* Sørger for, at containeren fylder hele bredden */
+    height: 400px; /* Fast højde for containeren */
+    background-size: cover; /* Sørger for, at billedet fylder hele containeren */
+    background-position: center; /* Centrerer billedet i containeren */
+    background-repeat: no-repeat; /* Forhindrer gentagelse af billedet */
+}
+  
+.produkt-billede {
+    width: 100%; /* Sørger for, at billedet fylder hele containerens bredde */
+    height: 100%; /* Sørger for, at billedet fylder hele containerens højde */
+    object-fit: fill; /* Sørger for, at billedet strækker sig for at fylde containeren */
+    display: block; /* Fjerner ekstra mellemrum under billedet */
+}
+  
+
+  
+  @media (max-width: 768px) {
+    .produkt-billede-container {
+        height: 300px; /* Reducer højden på mindre skærme */
+    }
+
+    .produkt-billede {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    @media (max-width: 768px) {
+        .produkt-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Skift til 2 kolonner */
+            gap: 20px; /* Reducer afstanden mellem elementerne */
+        }
+    
+        .produkt-billede-container {
+            height: 300px; /* Reducer højden på billederne for mindre skærme */
+        }
+    }
+    @media (max-width: 768px) {
+        .pagination {
+            flex-wrap: wrap; /* Tillader linjeskift på små skærme */
+            gap: 5px; /* Reducerer afstanden mellem elementerne */
+        }
+    
+        .pagination ul li a,
+        .pagination .prev,
+        .pagination .next {
+            padding: 8px 12px; /* Mindre padding for kompakt visning */
+            font-size: 14px; /* Mindre tekststørrelse */
+        }
+    }
+}
+ /* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center; /* Centrerer paginationen */
+    align-items: center; /* Justerer elementerne lodret */
+    gap: 10px; /* Afstand mellem elementerne */
+    margin: 40px 0;
+    padding: 0 20px;
+    flex-wrap: nowrap; /* Forhindrer linjeskift */
+}
+
+.pagination ul {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 5px; /* Afstand mellem sidenumrene */
+}
+
+.pagination ul li {
+    margin: 0;
+}
+
+.pagination ul li a,
+.pagination .prev,
+.pagination .next {
+    display: inline-block;
+    padding: 10px 15px;
+    color: #000000;
+    text-decoration: none;
+    font-family: "Work Sans", sans-serif;
+    font-size: 16px;
+    border: 1px solid #C2A476; /* Tilføjer en kant for at fremhæve knapperne */
+    border-radius: 5px; /* Afrunder hjørnerne */
+    transition: all 0.3s ease;
+}
+
+.pagination ul li a:hover,
+.pagination .prev:hover,
+.pagination .next:hover {
+    background-color: #C2A476; /* Fremhæv baggrunden ved hover */
+    color: #ffffff; /* Skift tekstfarven til hvid */
+}
+
+.pagination .active {
+    background-color: #C2A476; /* Fremhæv den aktive side */
+    color: #ffffff;
+    font-weight: bold;
+}

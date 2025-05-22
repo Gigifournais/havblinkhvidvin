@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Havblink Hvidvin</title>
+  <link rel="stylesheet" href="headerfooter.css">
+  <link rel="stylesheet" href="vinprofiler.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <header>
+    
+    <nav class="navbar">
+      <div class="wrapper">
+        <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+        <label for="menu-toggle" class="menu-icon">&#9776;</label>
+         <!-- Logoer -->
+         <div class="logo">
+            <!-- Stort logo til desktop -->
+            <a href="index.html">
+              <img src="forsidebilleder /logo.png" alt="Havblink Hvidvin logo" class="logo-desktop">
+            </a>
+          
+            <!-- Lille logo til mobil -->
+            <a href="index.html">
+              <img src="forsidebilleder /lillelogo.png" alt="Havblink Hvidvin lille logo" class="logo-mobile">
+            </a>
+          </div>
+
+      <ul class="nav-links">
+        <li><a href="Vinoversigt.html"class="active" >Vores vine</a></li>
+        <li class="dropdown">
+          <a href="">Om vingården</a>
+          <span class="dropdown-icon">▼</span>
+          <ul class="dropdown-menu">
+            <li><a href="voreshistorie.html">Vores historie</a></li>
+            <li><a href="">Vingården og naturen</a></li>
+            <li><a href="">Vores team</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a href="oplevelser.html">Oplevelser</a>
+          <span class="dropdown-icon">▼</span>
+          <ul class="dropdown-menu">
+            <li><a href="vinsmagning.html">Vinsmagning</a></li>
+            <li><a href="">Rundvisning på gården</a></li>
+            <li><a href="">Events og særlige dage</a></li>
+          </ul>
+        </li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+
+        <div class="icons_header">
+            <a href=""><img src="ikoner/user_icon.svg" alt="user ikon"></a>
+            <a href=""><img src="ikoner/heart_icon.svg" alt="heart ikon"></a>
+            <a href=""><img src="ikoner/search_icon.svg" alt="search ikon"></a>
+            <a href=""><img src="ikoner/bag_icon.svg" alt="bag ikon"></a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero sektion -->
+
+    <div class="hero">
+        <img src="hero billeder/tøndehero.jpg" alt="Hero billede" class="hero-image">
+        <div class="hero-text">
+            <h1 class="desktop-text">Hver vin har sin personlighed – opdag din favorit blandt vores karakterfulde hvidvine.</h1>
+            <h1 class="mobile-text">Hver vin har sin personlighed</h1>
+        </div>
+    </div>
+       
+
+    <!-- vin kategrorier -->
+    <section class="vinkategrorier-section">
+        <h2>Vin</h2>
+        <nav class="vinkategrorier-menu">
+          <a href="vinprofiler.html" class="active">Vin</a>
+          <a href="serveringstemperatur.html">Serverings temperatur</a>
+          <a href="glasvalg.html">Glasvalg</a>
+          <a href="madparring.html">Madparring</a>
+        </nav>
+      </section>
+      <!-- Produktdetaljer -->
+    <section class="produkt-detaljer">
+        <div class="produkt-billede">
+          <img src="vinoversigt/morgenbriseflaske.jpg" alt="Morgenbrise hvidvin">
+        </div>
+        <div class="produkt-info">
+          <h2>Morgenbrise hvidvin</h2>
+          <p class="pris">kr. 239,00</p>
+          <p class="beskrivelse">
+            <strong>Let. Lys. Livlig.</strong><br>
+            Morgenbrise er en elegant og forfriskende hvidvin med noter af grønne æbler, citrus og et diskret strejf af hyldeblomst. Smagen er klar og livlig, med en let mineralitet og en blød afslutning, der giver vinen sin nordiske karakter.
+          </p>
+          <p class="ekstra-info">
+            Navnet er inspireret af de tidlige morgentimer ved kysten, hvor lyset bryder frem, og vinden føles ren og ny. En vin skabt til dig, der sætter pris på enkelhed, æstetik og kvalitet.<br><br>
+            Produceret med omhu i Danmark – i små mængder.
+          </p>
+          <button class="tilfoej-kurv">Tilføj til kurv</button>
+          <button class="tilfoej-til-oenskeliste">
+            <i class="fas fa-heart"></i>
+          </button>
+        </div>
+      </section>
+  
+      <!-- Relaterede varer -->
+      <section class="relaterede-varer">
+        <h3>Relaterede varer</h3>
+        <div class="varer-grid">
+          <div class="vare">
+            <img src="vinoversigt/fjordguldflaske.jpg" alt="Fjordguld hvidvin">
+            <p>Fjordguld hvidvin</p>
+          </div>
+          <div class="vare">
+            <img src="vinoversigt/vesterlysflaske.jpg" alt="Vesterlys hvidvin">
+            <p>Vesterlys hvidvin</p>
+          </div>
+          <div class="vare">
+            <img src="vinoversigt/stilhedenskystflaske.jpg" alt="Stilhedens kyst hvidvin">
+            <p>Stilhedens kyst hvidvin</p>
+          </div>
+          <div class="vare">
+            <img src="vinoversigt/sommerkantflaske.jpg" alt="Stilhedens kyst hvidvin">
+            <p>Sommerkant hvidvin</p>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+   <footer class="footer">
+    <div class="footer-kolonner">
+      <div class="footer-logo">
+        <a href="index.html">
+            <img src="forsidebilleder /logo.png" alt="Havblink Hvidvin logo" />
+      </div>
+
+      <div class="footer-kolonne">
+        <h3>Kontakt os</h3>
+        <ul>
+          <li><a href="#">Bøgebjergvej 12 5600 Faaborg</a></li>
+          <li><a href="#">Danmark</a></li>
+          <li><a href="#">Havblinkhvidvin@gmail.dk</a></li>
+          <li><a href="#">+45 29 48 59 38</a></li>
+          <li><a href="#">Kundeservice</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-kolonne">
+        <h3>Info</h3>
+        <ul>
+          <li><a href="#">Fortælling om os</a></li>
+          <li><a href="#">Køb vores produkter</a></li>
+          <li><a href="#">Hold dig opdateret</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-kolonne">
+        <h3>Socials</h3>
+        <div class="social-icons">
+          <div class="social-icons">
+            <img src="ikoner/facebooklogo.png" alt="facebook">
+            <img src="ikoner/instagramlogo.png" alt="instagram">
+          </div>
+      </div>
+    </div>
+  </div>  
+  </footer>
+</body>
+</html>
