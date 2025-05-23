@@ -29,6 +29,8 @@ body {
     display: block; /* Vis det lille logo */
   }
 }
+
+
   /* Hero sektion */
   .hero {
     position: relative;
@@ -124,6 +126,8 @@ body {
 .award-item .arrow:hover {
   transform: translateX(5px); /* Flyt pilen lidt til højre ved hover */
 }
+
+
 /* Omkring os sektion */
 .about-section {
   text-align: center;
@@ -191,6 +195,8 @@ body {
   bottom: -10px; /* Placer stregen lige under teksten */
   left: 0; /* Sørger for, at stregen starter fra venstre */
 }
+
+
 /* Responsivt layout til mindre skærme */
 @media (max-width: 768px) {
   .about-images-section {
