@@ -140,7 +140,7 @@ body {
 @media (max-width: 768px) {
     .hero-text h1.mobile-text {
         display: block; /* Vis mobilteksten på mindre skærme */
-        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
+        font-size: 2rem; /* Mindre fontstørrelse til mobil */
     }
 
     .hero-text h1.desktop-text {
@@ -148,17 +148,6 @@ body {
     }
     .hero {
         height: 300px; /* Reducer højden på mindre skærme */
-    }
-
-    .hero-text h1.mobile-text {
-        display: block; /* Vis mobilteksten på mindre skærme */
-        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
-    }
-
-    .hero-text h1.desktop-text {
-        display: none; /* Skjul desktopteksten på mindre skærme */
-    }
-    .hero {
         margin-bottom: 20px; /* Mindre afstand på små skærme */
     }
         .kontakt-container {
@@ -182,6 +171,8 @@ body {
     
         .produkt-billede img {
             max-width: 100%; /* Gør billedet fuldbredde */
+            position: relative;
+            left: 50px; /* Flytter billedet mod højre på små skærme */  
         }
     
         .produkt-info {
@@ -219,6 +210,8 @@ body {
         width: 100%;
         max-width: 400px;
         border-radius: 5px;
+        position: relative;
+        left: 20px; /* Flytter billedet 20px mod højre */
       }
       
       .produkt-info {
@@ -256,16 +249,6 @@ body {
         background-color: #A88A63;
       }
       
-      .relaterede-varer {
-        text-align: center; /* Centrerer teksten og indholdet */
-        margin: 40px auto; /* Tilføjer afstand over og under sektionen */
-        max-width: 1200px; /* Begrænser bredden af sektionen */
-    }
-    
-    .relaterede-varer h3 {
-        font-size: 2rem; /* Gør overskriften mere fremtrædende */
-        margin-bottom: 20px; /* Tilføjer afstand under overskriften */
-    }
     
     .varer-grid {
         display: flex;
@@ -289,6 +272,7 @@ body {
         margin-top: 10px; /* Tilføjer afstand mellem billedet og teksten */
         font-size: 1rem; /* Justerer tekststørrelsen */
     }
+    /* ønskeliste-section */
       .tilfoej-til-oenskeliste {
         background: none; /* Fjern baggrund */
         border: none; /* Fjern kant */
@@ -310,3 +294,14 @@ body {
       .tilfoej-til-oenskeliste:hover i {
         color: #e63a3a; /* Ændrer farve ved hover */
       }
+/* relaterede-section */
+      .relaterede-varer {
+        text-align: center; /* Centrerer teksten og indholdet */
+        margin: 40px auto; /* Tilføjer afstand over og under sektionen */
+        max-width: 1200px; /* Begrænser bredden af sektionen */
+    }
+    
+    .relaterede-varer h3 {
+        font-size: 2rem; /* Gør overskriften mere fremtrædende */
+        margin-bottom: 20px; /* Tilføjer afstand under overskriften */
+    }

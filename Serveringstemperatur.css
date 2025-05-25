@@ -191,7 +191,7 @@ body {
 @media (max-width: 768px) {
     .hero-text h1.mobile-text {
         display: block; /* Vis mobilteksten på mindre skærme */
-        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
+        font-size: 2rem; /* Mindre fontstørrelse til mobil */
     }
 
     .hero-text h1.desktop-text {
@@ -201,14 +201,6 @@ body {
         height: 300px; /* Reducer højden på mindre skærme */
     }
 
-    .hero-text h1.mobile-text {
-        display: block; /* Vis mobilteksten på mindre skærme */
-        font-size: 1.5rem; /* Mindre fontstørrelse til mobil */
-    }
-
-    .hero-text h1.desktop-text {
-        display: none; /* Skjul desktopteksten på mindre skærme */
-    }
     .hero {
         margin-bottom: 20px; /* Mindre afstand på små skærme */
     }
