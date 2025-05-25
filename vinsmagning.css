@@ -1,29 +1,45 @@
 /* Basis */
+/* Standardindstillinger for hele siden */
 body {
-    margin: 0;
-    font-family: 'Cormorant Garamond', sans-serif;
-    background-color: #FAF8F3;
-    color: #2b2b2b;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-  }
-  
-  .nav-links a.active {
-    position: relative;
-    color: #000; /* Fremhæv farven på det aktive link */
-    font-weight: bold; /* Gør teksten fed for at fremhæve */
+  margin: 0; /* Fjern standard margin for at sikre, at indholdet starter fra kanten */
+  font-family: 'Cormorant Garamond', sans-serif; /* Klassisk skrifttype for at matche brandets stil */
+  background-color: #FAF8F3; /* Lys baggrund for en ren og indbydende følelse */
+  color: #2b2b2b; /* Mørk tekstfarve for god kontrast og læsbarhed */
+}
+ /* Overskrifter */
+/* Ensartet skrifttype og stil for alle overskrifter */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif; /* Klassisk skrifttype for overskrifter */
+}
+ /* Navigation Links */
+/* Styling for aktive links i navigationen */
+.nav-links a.active {
+  position: relative; /* Gør det muligt at tilføje en streg under teksten */
+  color: #000; /* Fremhæv farven på det aktive link */
+  font-weight: bold; /* Gør teksten fed for at fremhæve */
 }
 
+/* Tilføj en streg under det aktive link */
 .nav-links a.active::after {
-    content: ""; /* Tilføjer en streg under teksten */
-    position: absolute;
-    bottom: -5px; /* Placerer stregen lige under teksten */
-    left: 0;
-    width: 100%; /* Stregen fylder hele bredden af teksten */
-    height: 0.5px; /* Tykkelsen af stregen */
-    background-color: #000; /* Farven på stregen */
+  content: ""; /* Tilføjer en dekorativ streg */
+  position: absolute; /* Placerer stregen relativt til teksten */
+  bottom: -5px; /* Placerer stregen lige under teksten */
+  left: 0;
+  width: 100%; /* Stregen fylder hele bredden af teksten */
+  height: 0.5px; /* Tykkelsen af stregen */
+  background-color: #000; /* Sort farve for stregen */
+}
+
+/* Standard styling for navigation links */
+.nav-links a {
+  font-family: 'Cormorant Garamond', serif; /* Behold skrifttypen for menupunkterne */
+}
+/* Brødtekst */
+/* Styling for almindelig tekst og lister */
+p, li {
+  font-family: 'Mulish', sans-serif; /* Moderne skrifttype for brødtekst */
+  font-size: 1rem; /* Standard tekststørrelse for god læsbarhed */
+  margin-bottom: 1rem; /* Tilføjer afstand mellem tekstblokke */
 }
 /* Logo */
 /* Standard: Vis kun det store logo */
@@ -45,44 +61,33 @@ body {
       display: block; /* Vis det lille logo */
     }
   }
-  /* Hero sektion */
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    margin-bottom: 40px; /* Tilføj afstand under hero-sektionen */
+  /* Hero Sektion */
+/* Styling for hero-billedet og teksten */
+.hero {
+  position: relative; /* Gør det muligt at placere tekst oven på billedet */
+  width: 100%; /* Sørger for, at hero-sektionen fylder hele bredden af skærmen */
+  height: 500px; /* Fast højde for konsistens */
+  overflow: hidden; /* Skjuler eventuelle dele af billedet, der går uden for containeren */
+  margin-bottom: 40px; /* Tilføjer afstand under hero-sektionen */
+}
 
-  }
+.hero-image {
+  width: 100%; /* Sørger for, at billedet fylder hele bredden af hero-sektionen */
+  height: 100%; /* Sørger for, at billedet fylder hele højden af hero-sektionen */
+  object-fit: cover; /* Bevarer billedets proportioner og beskærer det for at fylde containeren */
+}
+
+.hero-text {
+  position: absolute; /* Placerer teksten oven på billedet */
+  top: 50%; /* Centrerer teksten vertikalt */
+  left: 50%; /* Centrerer teksten horisontalt */
+  transform: translate(-50%, -50%); /* Justerer teksten, så den er præcist centreret */
+  color: #FFECCE; /* Lys tekstfarve for at skabe kontrast mod baggrunden */
+  text-align: center; /* Centrerer teksten horisontalt */
+  font-size: 2rem; /* Gør teksten stor nok til at være iøjnefaldende */
+  font-weight: bold; /* Gør teksten mere fremtrædende */
+}
   
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFECCE;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFECCE;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-  }
   .hero-text h1 {
     font-size: 2rem; /* Standard fontstørrelse */
     text-align: center;
@@ -117,55 +122,57 @@ body {
 
 }
   
-  /* Naturlig aroma sektion */
-  .naturlig-aroma {
-    text-align: center;
-    margin: 100px 0;
-  }
+  /* Naturlig Aroma Sektion */
+/* Styling for sektionen med naturlige aromaer */
+.naturlig-aroma {
+  text-align: center; /* Centrerer teksten og indholdet */
+  margin: 100px 0; /* Tilføjer afstand over og under sektionen */
+}
+
+.naturlig-aroma h2 {
+  font-size: 2rem; /* Gør overskriften fremtrædende */
+  margin-bottom: 20px; /* Tilføjer afstand under overskriften */
+}
+
+.aroma-billeder {
+  display: grid; /* Brug grid-layout til at arrangere billederne */
+  grid-template-columns: repeat(3, 1fr); /* Tre kolonner med lige stor bredde */
+  gap: 20px; /* Tilføjer afstand mellem billederne */
+}
+
+.aroma-billeder img {
+  width: 100%; /* Sørger for, at billederne fylder hele kolonnen */
+  height: auto; /* Bevarer billedets proportioner */
+  border-radius: 0px; /* Ingen afrundede hjørner */
+}
   
-  .naturlig-aroma h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-  }
+  /* Mere End Vin Sektion */
+/* Styling for sektionen med vinikoner og tekst */
+.mere-end-vin {
+  display: flex; /* Brug flexbox til at arrangere ikoner og tekst side om side */
+  gap: 40px; /* Tilføjer afstand mellem ikoner og tekst */
+  margin: 40px 0; /* Tilføjer afstand over og under sektionen */
+}
   
-  .aroma-billeder {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-  
-  .aroma-billeder img {
-    width: 100%;
-    height: auto;
-    border-radius: 0px;
-  }
-  
-  /* Mere end vin sektion */
-  .mere-end-vin {
-    display: flex;
-    gap: 40px;
-    margin: 40px 0;
-  }
-  
-  .vin-ikoner {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    flex: 1;
-  }
+.vin-ikoner {
+  display: grid; /* Brug grid-layout til at arrangere ikonerne */
+  grid-template-columns: repeat(2, 1fr); /* To kolonner med lige stor bredde */
+  gap: 20px; /* Tilføjer afstand mellem ikonerne */
+  flex: 1; /* Gør ikonerne fleksible */
+}
   
   .vin-ikoner .ikon {
     text-align: center;
   }
   
   .vin-ikoner img {
-    width: 150px;
-    height: auto;
-  }
-  
-  .vin-tekst {
-    flex: 2;
-    text-align: left; /* Sørg for, at teksten er venstrejusteret */
+    width: 150px; /* Fast bredde for ikonerne */
+    height: auto; /* Bevarer billedets proportioner */
+}
+
+.vin-tekst {
+    flex: 2; /* Gør teksten dobbelt så bred som ikonerne */
+    text-align: left; /* Sørger for, at teksten er venstrejusteret */
     max-width: 600px; /* Begræns bredden for at samle teksten */
     margin: 0 auto; /* Centrer teksten, hvis det er nødvendigt */
 }
@@ -199,20 +206,27 @@ body {
   .se-mere-knap:hover {
     background-color: #A88A63;
   }
-  @media (max-width: 768px) {
-    .aroma-billeder {
-      grid-template-columns: repeat(2, 1fr);
-    }
-  
-    .mere-end-vin {
-      flex-direction: column;
-    }
-  
-    .vin-tekst {
-      text-align: center;
-    }
-  
-    .vin-ikoner {
-      grid-template-columns: repeat(1, 1fr);
-    }
+  /* Responsiv Design */
+/* Tilpas layoutet til mindre skærme */
+@media (max-width: 768px) {
+  .hero {
+      height: 300px; /* Reducer højden på hero-sektionen for at spare plads */
+      margin-bottom: 20px; /* Mindre afstand under hero-sektionen */
   }
+
+  .aroma-billeder {
+      grid-template-columns: repeat(2, 1fr); /* Reducer til to kolonner på mindre skærme */
+  }
+
+  .mere-end-vin {
+      flex-direction: column; /* Stak ikoner og tekst vertikalt */
+  }
+
+  .vin-tekst {
+      text-align: center; /* Centrer teksten på mindre skærme */
+  }
+
+  .vin-ikoner {
+      grid-template-columns: repeat(1, 1fr); /* Reducer til én kolonne på mindre skærme */
+  }
+}

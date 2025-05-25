@@ -9,6 +9,14 @@ body {
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif; /* Anvend skrifttypen */
 }
+.nav-links a {
+  font-family: 'Cormorant Garamond', serif; /* Behold skrifttypen for menupunkterne */
+}
+p, li {
+  font-family: 'Mulish', sans-serif; /* Sikrer Mulish på brødtekst */
+  font-size: 1rem; /* Standard tekststørrelse */
+  margin-bottom: 1rem; /* Tilføjer afstand mellem tekstblokke */
+}
 /* Logo */
 /* Standard: Vis kun det store logo */
 .logo-desktop {

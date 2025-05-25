@@ -1,11 +1,10 @@
 /* Basis */
 body {
-    margin: 0;
-    font-family: 'Cormorant Garamond', sans-serif;
-    background-color: #FAF8F3;
-    color: #2b2b2b;
-    
-  }
+  margin: 0;
+  font-family: 'Cormorant Garamond', sans-serif; /* Klassisk og elegant skrifttype for at matche brandets stil */
+  background-color: #FAF8F3; /* Lys baggrund for at skabe en ren og indbydende følelse */
+  color: #2b2b2b; /* Mørk tekstfarve for god kontrast og læsbarhed */
+}
   
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Cormorant Garamond', serif;
@@ -16,6 +15,9 @@ body {
     color: #000; /* Fremhæv farven på det aktive link */
     font-weight: bold; /* Gør teksten fed for at fremhæve */
 }
+.nav-links a {
+  font-family: 'Cormorant Garamond', serif; /* Behold skrifttypen for menupunkterne */
+}
 
 .nav-links a.active::after {
     content: ""; /* Tilføjer en streg under teksten */
@@ -25,6 +27,11 @@ body {
     width: 100%; /* Stregen fylder hele bredden af teksten */
     height: 0.5px; /* Tykkelsen af stregen */
     background-color: #000; /* Farven på stregen */
+}
+p, li {
+  font-family: 'Mulish', sans-serif; /* Sikrer Mulish på brødtekst */
+  font-size: 1rem; /* Standard tekststørrelse */
+  margin-bottom: 1rem; /* Tilføjer afstand mellem tekstblokke */
 }
 /* Logo */
 /* Standard: Vis kun det store logo */
@@ -48,42 +55,29 @@ body {
   }
   /* Hero sektion */
   .hero {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-    margin-bottom: 60px; /* Tilføj afstand under hero-sektionen */
-
+    position: relative; /* Gør det muligt at placere tekst oven på billedet */
+    width: 100%; /* Sikrer, at hero-sektionen fylder hele bredden af skærmen */
+    height: 500px; /* Giver hero-sektionen en fast højde for konsistens */
+    overflow: hidden; /* Skjuler eventuelle dele af billedet, der går uden for containeren */
+    margin-bottom: 60px; /* Tilføjer afstand under hero-sektionen for at adskille den fra resten af indholdet */
   }
   
   .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 100%; /* Sørger for, at billedet fylder hele bredden af hero-sektionen */
+    height: 100%; /* Sørger for, at billedet fylder hele højden af hero-sektionen */
+    object-fit: cover; /* Bevarer billedets proportioner og beskærer det for at fylde containeren */
   }
   
   .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFECCE;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFECCE;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Forbedrer kontrasten */
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
+    position: absolute; /* Placerer teksten oven på billedet */
+    top: 50%; /* Centrerer teksten vertikalt */
+    left: 50%; /* Centrerer teksten horisontalt */
+    transform: translate(-50%, -50%); /* Justerer teksten, så den er præcist centreret */
+    color: #FFECCE; /* Lys tekstfarve for at skabe kontrast mod baggrunden */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Tilføjer en skygge for bedre læsbarhed */
+    text-align: center; /* Centrerer teksten horisontalt */
+    font-size: 2rem; /* Gør teksten stor nok til at være iøjnefaldende */
+    font-weight: bold; /* Gør teksten mere fremtrædende */
   }
   .hero-text h1 {
     font-size: 3rem; /* Standard fontstørrelse */
@@ -156,47 +150,42 @@ body {
   }
   
   .kontakt-form {
-    flex: 1;
+    flex: 1; /* Gør formularen fleksibel, så den fylder halvdelen af containeren */
   }
   
   .kontakt-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;/* Øg afstanden mellem felterne i formularen */
-  }
-  
-  .kontakt-form label {
-    font-size: 1rem;
-    font-weight: bold;
+    display: flex; /* Brug flexbox for nem justering af felter */
+    flex-direction: column; /* Stabler felterne vertikalt */
+    gap: 20px; /* Tilføjer afstand mellem felterne for bedre læsbarhed */
   }
   
   .kontakt-form input,
   .kontakt-form select,
   .kontakt-form textarea {
-    width: 100%;
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #C2A476;
-    border-radius: 5px;
+    width: 100%; /* Sørger for, at felterne fylder hele bredden af formularen */
+    padding: 10px; /* Tilføjer indvendig afstand for bedre brugervenlighed */
+    font-size: 1rem; /* Standard tekststørrelse for god læsbarhed */
+    border: 1px solid #C2A476; /* Tilføjer en subtil kant for at matche designet */
+    border-radius: 5px; /* Afrundede hjørner for et moderne udseende */
   }
   
   .kontakt-form textarea {
-    height: 150px;
-    resize: none;
+    height: 150px; /* Giver tekstområdet en passende højde */
+    resize: none; /* Forhindrer brugeren i at ændre størrelsen på tekstområdet */
   }
   
   .send-knap {
-    background-color: #C2A476;
-    color: rgb(12, 10, 10);
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    border-radius: 0px;
+    background-color: #C2A476; /* Brug en varm farve for at gøre knappen iøjnefaldende */
+    color: rgb(12, 10, 10); /* Mørk tekstfarve for god kontrast */
+    border: none; /* Fjern standard kant for et rent udseende */
+    padding: 10px 20px; /* Tilføjer indvendig afstand for bedre klikområde */
+    font-size: 1rem; /* Standard tekststørrelse for god læsbarhed */
+    cursor: pointer; /* Gør det tydeligt, at knappen er klikbar */
+    border-radius: 0px; /* Beholder et skarpt og minimalistisk design */
   }
   
   .send-knap:hover {
-    background-color: #A88A63;
+    background-color: #A88A63; /* Ændrer farven ved hover for at indikere interaktivitet */
   }
   
   /* Google Maps */
@@ -205,7 +194,7 @@ body {
   }
   
   .kontakt-map iframe {
-    width: 100%; /* Fylder hele bredden af containeren */
-    height: 400px; /* Juster højden efter behov */
-    border: none; /* Fjern kantlinjer */
-}
+    width: 100%; /* Sørger for, at kortet fylder hele bredden af containeren */
+    height: 400px; /* Giver kortet en passende højde */
+    border: none; /* Fjern kantlinjer for et rent udseende */
+  }

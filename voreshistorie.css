@@ -1,29 +1,45 @@
 /* Basis */
+/* Standardindstillinger for hele siden */
 body {
-    margin: 0;
-    font-family: 'Cormorant Garamond', sans-serif;
-    background-color: #FAF8F3;
-    color: #2b2b2b;
-  }
-  
-  h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
-  }
-  
-  .nav-links a.active {
-    position: relative;
+    margin: 0; /* Fjern standard margin for at sikre, at indholdet starter fra kanten */
+    font-family: 'Cormorant Garamond', sans-serif; /* Klassisk skrifttype for at matche brandets stil */
+    background-color: #FAF8F3; /* Lys baggrund for en ren og indbydende følelse */
+    color: #2b2b2b; /* Mørk tekstfarve for god kontrast og læsbarhed */
+}
+ /* Overskrifter */
+/* Ensartet skrifttype og stil for alle overskrifter */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif; /* Klassisk skrifttype for overskrifter */
+}
+  /* Navigation Links */
+/* Styling for aktive links i navigationen */
+.nav-links a.active {
+    position: relative; /* Gør det muligt at tilføje en streg under teksten */
     color: #000; /* Fremhæv farven på det aktive link */
     font-weight: bold; /* Gør teksten fed for at fremhæve */
 }
 
+/* Tilføj en streg under det aktive link */
 .nav-links a.active::after {
-    content: ""; /* Tilføjer en streg under teksten */
-    position: absolute;
+    content: ""; /* Tilføjer en dekorativ streg */
+    position: absolute; /* Placerer stregen relativt til teksten */
     bottom: -5px; /* Placerer stregen lige under teksten */
     left: 0;
     width: 100%; /* Stregen fylder hele bredden af teksten */
     height: 0.5px; /* Tykkelsen af stregen */
-    background-color: #000; /* Farven på stregen */
+    background-color: #000; /* Sort farve for stregen */
+}
+
+/* Standard styling for navigation links */
+.nav-links a {
+    font-family: 'Cormorant Garamond', serif; /* Behold skrifttypen for menupunkterne */
+}
+/* Brødtekst */
+/* Styling for almindelig tekst og lister */
+p, li {
+    font-family: 'Mulish', sans-serif; /* Moderne skrifttype for brødtekst */
+    font-size: 1rem; /* Standard tekststørrelse for god læsbarhed */
+    margin-bottom: 1rem; /* Tilføjer afstand mellem tekstblokke */
 }
 /* Logo */
 /* Standard: Vis kun det store logo */
@@ -45,42 +61,33 @@ body {
       display: block; /* Vis det lille logo */
     }
   }
-  /* Hero sektion */
-  .hero {
-    position: relative;
-    width: 100%;
-    height: 500px;
-    overflow: hidden;
-  }
+  /* Hero Sektion */
+/* Styling for hero-billedet og teksten */
+.hero {
+    position: relative; /* Gør det muligt at placere tekst oven på billedet */
+    width: 100%; /* Sørger for, at hero-sektionen fylder hele bredden af skærmen */
+    height: 500px; /* Fast højde for konsistens */
+    overflow: hidden; /* Skjuler eventuelle dele af billedet, der går uden for containeren */
+}
+
+.hero-image {
+    width: 100%; /* Sørger for, at billedet fylder hele bredden af hero-sektionen */
+    height: 100%; /* Sørger for, at billedet fylder hele højden af hero-sektionen */
+    object-fit: cover; /* Bevarer billedets proportioner og beskærer det for at fylde containeren */
+}
+
+.hero-text {
+    position: absolute; /* Placerer teksten oven på billedet */
+    top: 50%; /* Centrerer teksten vertikalt */
+    left: 50%; /* Centrerer teksten horisontalt */
+    transform: translate(-50%, -50%); /* Justerer teksten, så den er præcist centreret */
+    color: #FFECCE; /* Lys tekstfarve for at skabe kontrast mod baggrunden */
+    text-align: center; /* Centrerer teksten horisontalt */
+    font-size: 2rem; /* Gør teksten stor nok til at være iøjnefaldende */
+    font-weight: bold; /* Gør teksten mere fremtrædende */
+}
   
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
   
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFECCE;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-  }
-  
-  
-  .hero-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #FFECCE;
-    text-align: center;
-    font-size: 2rem;
-    font-weight: bold;
-  }
   .hero-text h1 {
     font-size: 2rem; /* Standard fontstørrelse */
     text-align: center;
@@ -106,30 +113,33 @@ body {
     }
 }
 
+/* Vores Historie Sektion */
+/* Layout for tekst og billede */
 .vores-historie {
-    display: flex;
+    display: flex; /* Brug flexbox til at arrangere tekst og billede side om side */
     flex-wrap: wrap; /* Gør layoutet responsivt */
     gap: 20px; /* Afstand mellem tekst og billede */
-    padding: 40px;
+    padding: 40px; /* Tilføjer indvendig afstand for bedre layout */
     background-color: #FAF8F3; /* Baggrundsfarve */
 }
 
+/* Tekstcontainer */
 .tekst-container {
     flex: 1; /* Fylder pladsen tilgængelig */
     max-width: 600px; /* Maksimal bredde for teksten */
 }
 
 .tekst-container h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+    font-family: 'Cormorant Garamond', serif; /* Klassisk skrifttype for overskrifter */
+    font-size: 2.5rem; /* Gør overskriften fremtrædende */
+    margin-bottom: 20px; /* Tilføjer afstand under overskriften */
 }
 
 .tekst-container p {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
-    margin-bottom: 20px;
+    font-family: 'Work Sans', sans-serif; /* Moderne skrifttype for brødtekst */
+    font-size: 1rem; /* Standard tekststørrelse */
+    line-height: 1.6; /* Forbedrer læsbarheden */
+    margin-bottom: 20px; /* Tilføjer afstand mellem tekstblokke */
 }
 
 .tekst-container h3 {
@@ -138,44 +148,48 @@ body {
     margin-top: 20px;
 }
 
+/* Knap til at se mere */
 .se-mere-knap {
     background-color: #C2A476; /* Knapfarve */
-    color: #0e0d0d;
-    border: none;
-    padding: 10px 20px;
-    font-size: 1rem;
-    cursor: pointer;
-    font-family: 'Work Sans', sans-serif;
+    color: #0e0d0d; /* Tekstfarve */
+    border: none; /* Fjern kant for et rent udseende */
+    padding: 10px 20px; /* Tilføjer indvendig afstand for bedre klikområde */
+    font-size: 1rem; /* Standard tekststørrelse */
+    cursor: pointer; /* Gør det tydeligt, at knappen er klikbar */
+    font-family: 'Work Sans', sans-serif; /* Moderne skrifttype */
 }
 
 .se-mere-knap:hover {
     background-color: #A88A63; /* Mørkere farve ved hover */
 }
 
+/* Billedekontainer */
 .billede-container {
     flex: 1; /* Fylder pladsen tilgængelig */
     max-width: 500px; /* Maksimal bredde for billedet */
-    text-align: center;
+    text-align: center; /* Centrerer billedet */
     margin-left: 100px; /* Rykker billedet længere til højre */
 }
 
 .billede-container img {
     width: 100%; /* Billedet fylder containerens bredde */
     height: auto; /* Bevarer proportionerne */
-    border-radius: 0px; /* ingen afrunding af hjørner */
+    border-radius: 0px; /* Ingen afrunding af hjørner */
 }
 
 .billedtekst {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 0.9rem;
-    color: #555;
-    margin-top: 10px;
+    font-family: 'Work Sans', sans-serif; /* Moderne skrifttype */
+    font-size: 0.9rem; /* Mindre tekststørrelse */
+    color: #555; /* Grå farve for en subtil effekt */
+    margin-top: 10px; /* Afstand over billedteksten */
 }
 
+/* Responsiv Design */
+/* Tilpas layoutet til mindre skærme */
 @media (max-width: 768px) {
     .vores-historie {
         flex-direction: column; /* Stabler tekst og billede lodret */
-        align-items: center;
+        align-items: center; /* Centrerer indholdet */
     }
 
     .tekst-container {
@@ -189,7 +203,7 @@ body {
     }
 
     .tekst-container h2 {
-        text-align: center;
+        text-align: center; /* Centrer overskriften */
     }
 
     .billede-container img {

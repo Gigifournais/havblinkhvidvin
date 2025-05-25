@@ -24,6 +24,14 @@ body {
     height: 0.5px; /* Tykkelsen af stregen */
     background-color: #000; /* Farven på stregen */
 }
+.nav-links a {
+  font-family: 'Cormorant Garamond', serif; /* Behold skrifttypen for menupunkterne */
+}
+p, li {
+  font-family: 'Mulish', sans-serif; /* Sikrer Mulish på brødtekst */
+  font-size: 1rem; /* Standard tekststørrelse */
+  margin-bottom: 1rem; /* Tilføjer afstand mellem tekstblokke */
+}
 /* Logo */
 /* Standard: Vis kun det store logo */
 .logo-desktop {
@@ -184,51 +192,60 @@ body {
     }
 }
  /* Pagination */
+/* Centrerer paginationen og sikrer, at elementerne er jævnt fordelt */
 .pagination {
-    display: flex;
-    justify-content: center; /* Centrerer paginationen */
-    align-items: center; /* Justerer elementerne lodret */
-    gap: 10px; /* Afstand mellem elementerne */
-    margin: 40px 0;
-    padding: 0 20px;
-    flex-wrap: nowrap; /* Forhindrer linjeskift */
+  display: flex; /* Brug flexbox for nem justering af elementer */
+  justify-content: center; /* Centrerer paginationen horisontalt */
+  align-items: center; /* Justerer elementerne lodret */
+  gap: 10px; /* Tilføjer afstand mellem elementerne */
+  margin: 40px 0; /* Tilføjer afstand over og under paginationen */
+  padding: 0 20px; /* Tilføjer indvendig afstand for bedre layout */
+  flex-wrap: nowrap; /* Forhindrer linjeskift på større skærme */
 }
 
+/* Pagination List */
+/* Fjerner standard liste-styling og placerer sidenumrene på en linje */
 .pagination ul {
-    list-style: none;
-    display: flex;
-    padding: 0;
-    margin: 0;
-    gap: 5px; /* Afstand mellem sidenumrene */
+  list-style: none; /* Fjern standard punkttegn fra listen */
+  display: flex; /* Placer sidenumrene på en linje */
+  padding: 0; /* Fjern standard padding */
+  margin: 0; /* Fjern standard margin */
+  gap: 5px; /* Tilføjer afstand mellem sidenumrene */
 }
 
 .pagination ul li {
     margin: 0;
 }
 
+/* Pagination Items */
+/* Styling for sidenumre og navigationsknapper */
 .pagination ul li a,
 .pagination .prev,
 .pagination .next {
-    display: inline-block;
-    padding: 10px 15px;
-    color: #000000;
-    text-decoration: none;
-    font-family: "Work Sans", sans-serif;
-    font-size: 16px;
+    display: inline-block; /* Gør elementerne klikbare som knapper */
+    padding: 10px 15px; /* Tilføjer indvendig afstand for bedre klikområde */
+    color: #000000; /* Sort tekstfarve for god kontrast */
+    text-decoration: none; /* Fjern understregning for et rent udseende */
+    font-family: "Work Sans", sans-serif; /* Moderne skrifttype for læsbarhed */
+    font-size: 16px; /* Standard tekststørrelse */
     border: 1px solid #C2A476; /* Tilføjer en kant for at fremhæve knapperne */
-    border-radius: 5px; /* Afrunder hjørnerne */
-    transition: all 0.3s ease;
+    border-radius: 5px; /* Afrunder hjørnerne for et moderne udseende */
+    transition: all 0.3s ease; /* Glidende overgang ved hover for bedre brugeroplevelse */
 }
 
+/* Hover Effekt */
+/* Fremhæv knapperne, når brugeren holder musen over dem */
 .pagination ul li a:hover,
 .pagination .prev:hover,
 .pagination .next:hover {
-    background-color: #C2A476; /* Fremhæv baggrunden ved hover */
-    color: #ffffff; /* Skift tekstfarven til hvid */
+    background-color: #C2A476; /* Skift baggrundsfarven til en varm guldtonet farve */
+    color: #ffffff; /* Skift tekstfarven til hvid for bedre kontrast */
 }
 
+/* Aktiv Side */
+/* Fremhæv den aktive side for at indikere, hvor brugeren er */
 .pagination .active {
-    background-color: #C2A476; /* Fremhæv den aktive side */
-    color: #ffffff;
-    font-weight: bold;
+    background-color: #C2A476; /* Fremhæv baggrunden for den aktive side */
+    color: #ffffff; /* Hvid tekstfarve for god kontrast */
+    font-weight: bold; /* Gør teksten fed for at fremhæve den yderligere */
 }

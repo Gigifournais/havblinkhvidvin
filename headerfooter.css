@@ -1,67 +1,68 @@
 /* Generelle stylinger */
 /* Header og navigation */
+/* Header og navigation */
 header {
-    background-color: #87825B; /* Olivengrøn baggrund */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 100px; /* Øg højden */
-  }
+  background-color: #87825B; /* Olivengrøn baggrund for at skabe en naturlig og elegant følelse */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Tilføjer en subtil skygge for at give dybde */
+  position: sticky; /* Gør headeren fast øverst, så den altid er synlig ved scroll */
+  top: 0; /* Sørger for, at headeren starter øverst */
+  z-index: 1000; /* Sørger for, at headeren altid ligger øverst over andre elementer */
+  height: 100px; /* Øget højde for at give plads til logo og navigation */
+}
   
-  .wrapper {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-  }
+.wrapper {
+  max-width: 1200px; /* Begrænser bredden for at sikre, at indholdet ikke bliver for bredt på store skærme */
+  margin: 0 auto; /* Centrerer indholdet horisontalt */
+  padding: 0 1rem; /* Tilføjer lidt indvendig afstand for at undgå, at indholdet rammer kanten */
+  display: flex; /* Brug af flexbox for nem justering af elementer */
+  align-items: center; /* Vertikal centrering af elementer */
+  justify-content: space-between; /* Fordeler elementerne jævnt med plads imellem */
+  height: 80px; /* Fast højde for at sikre konsistens */
+}
 
  
   /* Navigation */
   .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 2rem;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-links li a {
-    text-decoration: none;
-    color: #FFECCE;
-    font-weight: 400;
-    transition: color 0.3s ease;
-  }
-  
-  .nav-links li a:hover {
-    color: #B29D7B; /* Lys guld til hover */
-  }
+    list-style: none; /* Fjern standard punkttegn fra lister */
+    display: flex; /* Brug flexbox for at placere links på en linje */
+    gap: 2rem; /* Tilføjer afstand mellem links for bedre læsbarhed */
+    margin: 0; /* Fjern standard margin */
+    padding: 0; /* Fjern standard padding */
+}
+
+.nav-links li a {
+    text-decoration: none; /* Fjern understregning for et renere udseende */
+    color: #FFECCE; /* Lys beige farve for at skabe kontrast mod den mørke baggrund */
+    font-weight: 400; /* Normal vægt for at holde teksten letlæselig */
+    transition: color 0.3s ease; /* Glidende overgang ved hover for en bedre brugeroplevelse */
+}
+
+.nav-links li a:hover {
+    color: #B29D7B; /* Lys guld farve ved hover for at indikere interaktivitet */
+}
 
   /* Standard: Vis det store logo */
-.logo-desktop {
-  display: block;
-  width: 200px; /* Juster størrelsen på det store logo */
-  height: auto;/* Bevar billedets proportioner */
+  .logo-desktop {
+    display: block; /* Vis det store logo som standard */
+    width: 200px; /* Juster størrelsen for at sikre, at logoet ikke fylder for meget */
+    height: auto; /* Bevar billedets proportioner */
 }
 
 .logo-mobile {
-  display: none; /* Skjul det lille logo som standard */
+    display: none; /* Skjul det lille logo som standard */
 }
 
-/* Responsiv: Skift til det lille logo */
+/* Responsiv: Skift til det lille logo på mindre skærme */
 @media (max-width: 768px) {
-  .logo-desktop {
-      display: none; /* Skjul det store logo på mobil */
-  }
+    .logo-desktop {
+        display: none; /* Skjul det store logo for at spare plads på mobil */
+    }
 
-  .logo-mobile {
-      display: block; /* Vis det lille logo på mobil */
-      width: 100px; /* Juster størrelsen på det lille logo */
-      height: auto;
-  }
+    .logo-mobile {
+        display: block; /* Vis det lille logo for bedre tilpasning til små skærme */
+        width: 100px; /* Reduceret størrelse for at passe til mobilskærme */
+        height: auto; /* Bevar billedets proportioner */
+    }
 }
   /* Dropdown-menu styling */
 .nav-links .dropdown {
@@ -75,20 +76,18 @@ header {
 }
 
 .nav-links .dropdown-menu {
-  display: none; /* Skjul dropdown-menuen som standard */
-  position: absolute;
-  top: 100%; /* Placer menuen lige under linket */
-  left: 0;
-  background-color: #87825Bff; /* Hvid baggrund */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Blød skygge */
-  list-style: none;
-  padding: 10px 0;
-  margin: 0;
-  z-index: 1000;
-  border-radius: 8px; /* Afrundede hjørner */
-  transition: opacity 0.3s ease, transform 0.3s ease; /* Glidende overgang */
-  opacity: 0; /* Skjul med gennemsigtighed */
-  transform: translateY(-10px); /* Flyt lidt opad */
+  display: none; /* Skjul dropdown-menuen som standard for at holde designet rent */
+  position: absolute; /* Placer menuen relativt til dens forælder */
+  top: 100%; /* Placer menuen lige under dropdown-linket */
+  left: 0; /* Juster menuen til venstre */
+  background-color: #87825B; /* Match baggrundsfarven med headeren for konsistens */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tilføjer en blød skygge for at fremhæve menuen */
+  list-style: none; /* Fjern standard punkttegn */
+  padding: 10px 0; /* Tilføjer lidt indvendig afstand for bedre læsbarhed */
+  margin: 0; /* Fjern standard margin */
+  z-index: 1000; /* Sørger for, at menuen vises over andre elementer */
+  border-radius: 8px; /* Afrundede hjørner for et moderne udseende */
+  transition: opacity 0.3s ease, transform 0.3s ease; /* Glidende overgang for en bedre brugeroplevelse */
 }
 
 .nav-links .dropdown-menu li {
@@ -135,50 +134,50 @@ header {
 /* Responsiv menu */
 @media (max-width: 768px) {
   .nav-links {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    background-color: #87825B;
-    width: 100%;
-    padding: 1rem 0;
-    border-top: 1px solid #ddd;
+      display: none; /* Skjul navigationen som standard på mobil */
+      flex-direction: column; /* Stak links vertikalt for bedre mobiltilpasning */
+      position: absolute; /* Placer navigationen over indholdet */
+      top: 80px; /* Placer navigationen lige under headeren */
+      left: 0; /* Juster navigationen til venstre */
+      background-color: #87825B; /* Match baggrundsfarven med headeren */
+      width: 100%; /* Gør navigationen fuldbredde */
+      padding: 1rem 0; /* Tilføj indvendig afstand for bedre læsbarhed */
+      border-top: 1px solid #ddd; /* Tilføj en linje for at adskille navigationen fra headeren */
   }
 
   .menu-checkbox:checked ~ .nav-links {
-    display: flex;
+      display: flex; /* Vis navigationen, når burgermenuen er aktiveret */
   }
 
   .menu-icon {
-    display: block;
+      display: block; /* Vis burgermenu-ikonet på mobil */
   }
 
   .icons_header {
-    display: none;
+      display: none; /* Skjul ikonerne i headeren på mobil for at spare plads */
   }
 }
 
 /* FOOTER STYLING */
 .footer {
-    background-color: #87825B;
-    color: #000;
-    padding: 40px 20px; /* Øg pladsen */
-    display: flex;
-    flex-direction: column;
+  background-color: #87825B; /* Match baggrundsfarven med headeren for konsistens */
+  color: #000; /* Sort tekstfarve for god kontrast */
+  padding: 40px 20px; /* Tilføjer plads omkring indholdet for bedre læsbarhed */
+  display: flex; /* Brug flexbox for nem justering af kolonner */
+  flex-direction: column; /* Stak kolonnerne vertikalt som standard */
 }
 
 .footer-kolonner {
-    display: flex;
-    gap: 50px; /* Reducer afstanden mellem kolonner */
-    justify-content: space-between; /* Fordel kolonnerne jævnt */
-    flex-wrap: wrap; /* Tillad kolonnerne at bryde til næste linje */
+  display: flex; /* Brug flexbox for at placere kolonner på en linje */
+  gap: 50px; /* Tilføjer afstand mellem kolonner for bedre læsbarhed */
+  justify-content: space-between; /* Fordel kolonnerne jævnt */
+  flex-wrap: wrap; /* Tillad kolonnerne at bryde til næste linje på små skærme */
 }
 
 .footer-kolonne {
-    flex: 1; /* Gør kolonnerne fleksible */
-    min-width: 200px; /* Sæt en minimumsbredde */
-    text-align: left; /* Juster teksten til venstre */
+  flex: 1; /* Gør kolonnerne fleksible for at tilpasse sig tilgængelig plads */
+  min-width: 200px; /* Sæt en minimumsbredde for at sikre, at kolonnerne ikke bliver for smalle */
+  text-align: left; /* Juster teksten til venstre for bedre læsbarhed */
 }
 
 .footer-kolonne h3 {
