@@ -1,44 +1,36 @@
-* Aktiv Side */
-/* Fremhæv den aktive side for at indikere, hvor brugeren er */
-.pagination .active {
-    background-color: #C2A476; /* Fremhæv baggrunden for den aktive side */
-    color: #ffffff; /* Hvid tekstfarve for god kontrast */
-    font-weight: bold; /* Gør teksten fed for at fremhæve den yderligere */
+/* Basis */
+body {
+  margin: 0;
+  font-family: 'Cormorant Garamond', sans-serif;
+  background-color: #FAF8F3;
+  color: #2b2b2b;
 }
- /* Overskrifter */
-/* Ensartet skrifttype og stil for alle overskrifter */
+
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'Cormorant Garamond', serif; /* Klassisk skrifttype for overskrifter */
+  font-family: 'Cormorant Garamond', serif;
 }
- /* Navigation Links */
-/* Styling for aktive links i navigationen */
 .nav-links a.active {
-  position: relative; /* Gør det muligt at tilføje en streg under teksten */
+  position: relative;
   color: #000; /* Fremhæv farven på det aktive link */
   font-weight: bold; /* Gør teksten fed for at fremhæve */
 }
 
-/* Tilføj en streg under det aktive link */
 .nav-links a.active::after {
-  content: ""; /* Tilføjer en dekorativ streg */
-  position: absolute; /* Placerer stregen relativt til teksten */
+  content: ""; /* Tilføjer en streg under teksten */
+  position: absolute;
   bottom: -5px; /* Placerer stregen lige under teksten */
   left: 0;
   width: 100%; /* Stregen fylder hele bredden af teksten */
   height: 0.5px; /* Tykkelsen af stregen */
-  background-color: #000; /* Sort farve for stregen */
+  background-color: #000; /* Farven på stregen */
 }
-
-/* Standard styling for navigation links */
 .nav-links a {
-  font-family: 'Cormorant Garamond', serif; /* Behold skrifttypen for menupunkterne */
+font-family: 'Cormorant Garamond', serif; /* Behold skrifttypen for menupunkterne */
 }
-/* Brødtekst */
-/* Styling for almindelig tekst og lister */
 p, li {
-  font-family: 'Mulish', sans-serif; /* Moderne skrifttype for brødtekst */
-  font-size: 1rem; /* Standard tekststørrelse for god læsbarhed */
-  margin-bottom: 1rem; /* Tilføjer afstand mellem tekstblokke */
+font-family: 'Mulish', sans-serif; /* Sikrer Mulish på brødtekst */
+font-size: 1rem; /* Standard tekststørrelse */
+margin-bottom: 1rem; /* Tilføjer afstand mellem tekstblokke */
 }
 
 /* Logo */
@@ -297,14 +289,43 @@ p, li {
       .tilfoej-til-oenskeliste:hover i {
         color: #e63a3a; /* Ændrer farve ved hover */
       }
-/* relaterede-section */
-      .relaterede-varer {
-        text-align: center; /* Centrerer teksten og indholdet */
-        margin: 40px auto; /* Tilføjer afstand over og under sektionen */
-        max-width: 1200px; /* Begrænser bredden af sektionen */
-    }
-    
-    .relaterede-varer h3 {
-        font-size: 2rem; /* Gør overskriften mere fremtrædende */
-        margin-bottom: 20px; /* Tilføjer afstand under overskriften */
-    }
+/* Styling for relaterede varer */
+.relaterede-varer {
+  text-align: center; /* Centrerer teksten og indholdet */
+  margin: 40px auto; /* Tilføjer afstand over og under sektionen */
+  max-width: 1200px; /* Begrænser bredden af sektionen */
+}
+
+.relaterede-varer h3 {
+  font-size: 2rem; /* Gør overskriften mere fremtrædende */
+  margin-bottom: 20px; /* Tilføjer afstand under overskriften */
+}
+
+.relaterede-varer-grid {
+  display: grid; /* Brug CSS Grid til layout */
+  grid-template-columns: repeat(4, 1fr); /* Tre kolonner som standard */
+  gap: 20px; /* Tilføjer afstand mellem elementerne */
+}
+
+.relaterede-varer-grid .vare {
+  text-align: center; /* Centrerer teksten under hvert produkt */
+}
+
+.relaterede-varer-grid img {
+  width: 100%; /* Sørger for, at billederne fylder deres container */
+  max-width: 200px; /* Begrænser billedets bredde */
+  border-radius: 5px; /* Tilføjer afrundede hjørner */
+}
+
+/* Responsiv styling */
+@media (max-width: 768px) {
+  .relaterede-varer-grid {
+    grid-template-columns: repeat(2, 1fr); /* Skift til to kolonner på mindre skærme */
+  }
+}
+
+@media (max-width: 480px) {
+  .relaterede-varer-grid {
+    grid-template-columns: 1fr; /* Skift til én kolonne på meget små skærme */
+  }
+}
