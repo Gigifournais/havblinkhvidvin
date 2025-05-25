@@ -303,7 +303,7 @@ margin-bottom: 1rem; /* Tilføjer afstand mellem tekstblokke */
 
 .relaterede-varer-grid {
   display: grid; /* Brug CSS Grid til layout */
-  grid-template-columns: repeat(4, 1fr); /* Tre kolonner som standard */
+  grid-template-columns: repeat(4, 1fr); /* Fire kolonner som standard */
   gap: 20px; /* Tilføjer afstand mellem elementerne */
 }
 
